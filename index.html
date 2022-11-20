@@ -1,35 +1,46 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/412379eca8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <title>타이핑 게임</title>
 </head>
+
 <body>
-    <div class="settings" id="settings">
-    <label for="difficulty">Difficulty</label>
-    <select id="difficulty">
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="hard">Hard</option>
-    </select>
+    <div class="settings show" id="settings">
+        <div>
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty" class="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
     </div>
     <div class="container">
         <h2>🧑‍💻 타이핑 게임 🧑‍💻</h2>
-        <p class="time-container">남은 시간 : <span id="time">0초</span></p>
+        <p class="time-container">남은 시간 : <span id="time"></span></p>
         <p class="score-container">점수: <span id="score">0</span></p>
-        <small>제시어 : </small>
-        <h1 id="word"></h1>
-        <input type="text" placeholder="단어를 입력하세요">
+
+            <small>제시어 : </small>
+            <h1 id="word"></h1>
+            <input id="wordInput" type="text" placeholder="단어를 입력하세요">
+
+
+
     </div>
     <div class="end-game-container" id="end-game-container">
-        <h1>시간 초과</h1>
-        <p>최종 점수는 0점 입니다.</p>
-        <button>다시 시작</button>
+        
     </div>
     <button id="settings-btn" class="settings-btn">
         <i class="fa-solid fa-gear"></i>
     </button>
+
+    <script src="main.js"></script>
+
 </body>
+
 </html>
